@@ -1,0 +1,24 @@
+{
+  "name": "blog-examples",
+  "version": "1.0.0",
+  "description": "Example codes to demostrate in my blog.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "blog-dev": "npx tailwindcss-cli@latest build blog-tailwind.css -c blog.dev.config.js -o default.css",
+    "blog-prod": "npx tailwindcss-cli@latest build blog-tailwind.css -c blog.prod.config.js -o default.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjowens/blog-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjowens/blog-examples/issues"
+  },
+  "homepage": "https://github.com/jjowens/blog-examples#readme",
+  "dependencies": {
+    "tailwindcss": "^2.1.2"
+  }
+}

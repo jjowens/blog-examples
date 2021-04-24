@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+
+.example-widget {
+    @apply border-gray-300 bg-gray-100 m-2
+}
+
+.example-widget-header {
+    @apply flex-1 bg-gray-600 text-white text-2xl p-2
+}
+
+.example-widget-body {
+    @apply p-2
+}
+
+.example-widget a {
+	@apply text-blue-600 no-underline
+}
+
+.example-widget a:hover {
+	@apply text-blue-600 underline
+}
+
+.example-widget a:visited {
+	@apply text-blue-600 underline font-semibold
+}
+
+.example-widget a:active {
+	@apply text-blue-600 underline font-semibold
+}
+
+@tailwind utilities;
