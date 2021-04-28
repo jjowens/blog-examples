@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+
+body {
+	@apply mx-auto w-9/12
+}
+
+.status-greeting {
+	@apply rounded text-white bg-green-600 p-2
+}
+
+.status-warning {
+	@apply rounded text-white bg-red-600 p-2
+}
+
+.banner {
+	@apply rounded bg-blue-600 text-white p-2
+}
+
+.banner h1 {
+	@apply text-2xl
+}
+
+.main-menu {
+	@apply mr-2 mb-2
+}
+
+.main-menu-heading {
+	@apply rounded-t-lg bg-blue-800 text-white p-2 text-center font-semibold
+}
+
+.main-menu-body {
+	@apply bg-blue-600 p-2
+}
+
+.main-menu a {
+	@apply text-white no-underline
+}
+
+.main-menu a:hover {
+	@apply text-white underline
+}
+
+.main-menu a:visited {
+	@apply text-white underline font-semibold
+}
+
+.main-menu a:active {
+	@apply text-white underline font-semibold
+}
+
+.admin-menu {
+	@apply mr-2 mb-2
+}
+
+.admin-menu-heading {
+	@apply rounded-t-lg bg-gray-800 text-white p-2 text-center font-semibold
+}
+
+.admin-menu-body {
+	@apply bg-gray-600 p-2
+}
+
+.admin-menu a {
+	@apply text-white no-underline
+}
+
+.admin-menu a:hover {
+	@apply text-white underline
+}
+
+.admin-menu a:visited {
+	@apply text-white underline font-semibold
+}
+
+.main-menu a:active {
+	@apply text-white underline font-semibold
+}
+
+@tailwind utilities;
