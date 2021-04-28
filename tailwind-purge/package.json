@@ -1,13 +1,11 @@
 {
-  "name": "tailwind-minify",
+  "name": "tailwind-purge",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind-dev": "npx tailwindcss-cli@latest build ./assets/tailwind.css -c tailwind.dev.config.js -o ./website/public/css/default.css",
     "tailwind-prod": "npx tailwindcss-cli@latest build ./assets/tailwind.css -c tailwind.prod.config.js -o ./website/public/css/default.css",
-    "tailwind-test": "npm run tailwind-dev & npm run minify-files.js"
   },
   "author": "",
   "license": "ISC",
