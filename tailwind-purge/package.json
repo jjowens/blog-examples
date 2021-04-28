@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "tailwind-dev": "npx tailwindcss-cli@latest build ./assets/tailwind.css -c tailwind.dev.config.js -o ./website/public/css/default.css",
-    "tailwind-prod": "npx tailwindcss-cli@latest build ./assets/tailwind.css -c tailwind.prod.config.js -o ./website/public/css/default.css"
+    "tailwind-dev": "npx tailwindcss-cli@latest build tailwind.css -c tailwind.dev.config.js -o default.css",
+    "tailwind-prod": "npx tailwindcss-cli@latest build tailwind.css -c tailwind.prod.config.js -o default.css"
   },
   "author": "",
   "license": "ISC",

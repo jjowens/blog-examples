@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
 	enabled: false,
-	content: ['./website/*.html', './website/public/**/*.js']
+	content: ['index.html', 'dashboard.js']
 	},
   darkMode: false,
   theme: {
