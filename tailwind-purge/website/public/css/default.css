@@ -202,7 +202,8 @@ select { /* 1 */
 Correct the inability to style clickable types in iOS and Safari.
 */
 
-button {
+button,
+[type='button'] {
   -webkit-appearance: button;
 }
 
@@ -665,8 +666,16 @@ body {
   border-radius: 9999px;
 }
 
+.flex {
+  display: flex;
+}
+
 .table {
   display: table;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -675,6 +684,14 @@ body {
 
 .justify-center {
   justify-content: center;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.clear-both {
+  clear: both;
 }
 
 .font-semibold {
@@ -686,8 +703,17 @@ body {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .m-2 {
   margin: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .p-3 {
