@@ -11,12 +11,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     stockStatusObj.classList.add("bg-green-500");
-
     salesStatusObj.classList.add("bg-red-600");
-    salesStatusObj.classList.add("rounded-full");
-    salesStatusObj.classList.add("h-200");
-    salesStatusObj.classList.add("w-200");
-    salesStatusObj.classList.add("items-center");
-    salesStatusObj.classList.add("justify-center");
 
 });

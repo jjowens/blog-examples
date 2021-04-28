@@ -516,136 +516,26 @@ video {
   height: auto;
 }
 
-body {
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%
-}
-
-.status-greeting {
-  --tw-bg-opacity: 1;
-  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity))
-}
-
-.status-warning {
-  --tw-bg-opacity: 1;
-  background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity))
-}
-
-.banner {
-  --tw-bg-opacity: 1;
-  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity))
-}
-
-.banner h1 {
-  font-size: 1.5rem;
-  line-height: 2rem
-}
-
-.main-menu {
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem
-}
-
-.main-menu-heading {
-  --tw-bg-opacity: 1;
-  background-color: rgba(30, 64, 175, var(--tw-bg-opacity));
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  font-weight: 600;
-  padding: 0.5rem;
-  text-align: center;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity))
-}
-
-.main-menu-body {
-  --tw-bg-opacity: 1;
-  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
-  padding: 0.5rem
-}
-
-.main-menu a {
+.main-menu-links a {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   text-decoration: none
 }
 
-.main-menu a:hover {
+.main-menu-links a:hover {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   text-decoration: underline
 }
 
-.main-menu a:visited {
+.main-menu-links a:visited {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   text-decoration: underline
 }
 
-.main-menu a:active {
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  text-decoration: underline
-}
-
-.admin-menu {
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem
-}
-
-.admin-menu-heading {
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  font-weight: 600;
-  padding: 0.5rem;
-  text-align: center;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity))
-}
-
-.admin-menu-body {
-  --tw-bg-opacity: 1;
-  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
-  padding: 0.5rem
-}
-
-.admin-menu a {
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  text-decoration: none
-}
-
-.admin-menu a:hover {
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  text-decoration: underline
-}
-
-.admin-menu a:visited {
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  text-decoration: underline
-}
-
-.main-menu a:active {
+.main-menu-links a:active {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
@@ -662,8 +552,23 @@ body {
   background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
 }
 
-.rounded-full {
-  border-radius: 9999px;
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(30, 64, 175, var(--tw-bg-opacity));
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .flex {
@@ -676,14 +581,6 @@ body {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .flex-shrink-0 {
@@ -712,8 +609,25 @@ body {
   margin: 0.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-3 {
@@ -733,9 +647,17 @@ body {
   --tw-ring-shadow: 0 0 #0000;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.w-9\/12 {
+  width: 75%;
 }
 
 @-webkit-keyframes spin {
