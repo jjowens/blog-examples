@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sort</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-for="book in sortedBooks">
+            {{ book.bookTitle }} - {{book.author.fullName}}
+        </p>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+            data: {
+                books: [
+                    { bookTitle: "One Hundred Years of Solitude", author: {firstName: "Gabriel García", lastName: "Márquez", fullName: "Gabriel García Márquez"} },
+                    { bookTitle: "I Capture the Castle", author: {firstName: "Dodie", lastName: "Smith", fullName: "Dodie Smith"} }, 
+                    { bookTitle: "Jane Eyre", author: {firstName: "Charlotte", lastName: "Bronte", fullName: "Charlotte Bronte"} }, 
+                    { bookTitle: "The Call of the Wild", author: {firstName: "Jack", lastName: "London", fullName: "Jack London"} }, 
+                    { bookTitle: "The Lion, the Witch and the Wardrobe", author: {firstName: "C.S", fullName: "Lewis", fullName: "C.S Lewis"} }, 
+                    { bookTitle: "Lark Rise to Candleford", author: {firstName: "Flora", lastName: "Thompson", fullName: "Flora Thompson"} }
+                ]
+            },
+            computed: {
+                sortedBooks: function() {
+                    return this.books.sort(function(a,b) {
+                        if (a.bookTitle < b.bookTitle) {
+                            return -1;
+                        }
+                        if (a.bookTitle > b.bookTitle) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                }
+            }
+        })
+</script>
+</html>
