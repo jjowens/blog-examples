@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sort</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p> Sort By
+            <select v-model="sortBy">
+                <option value="title">Book Title</option>
+                <option value="lastName">Author Last Name</option>
+            </select>
+
+            Sort Order
+            <select v-model="sortOrder">
+                <option value="asc">ASC</option>
+                <option value="desc">DESC</option>
+            </select>
+        </p>
+        <p>{{ sortBy}} {{ sortOrder }}</p>
+        <p v-for="book in sortedBooksByOption">
+            {{ book.bookTitle }} - {{book.author.fullName}}
+        </p>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+            data: {
+                books: [
+                    { bookTitle: "One Hundred Years of Solitude", author: {firstName: "Gabriel García", lastName: "Márquez", fullName: "Gabriel García Márquez"} },
+                    { bookTitle: "I Capture the Castle", author: {firstName: "Dodie", lastName: "Smith", fullName: "Dodie Smith"} }, 
+                    { bookTitle: "Jane Eyre", author: {firstName: "Charlotte", lastName: "Bronte", fullName: "Charlotte Bronte"} }, 
+                    { bookTitle: "The Call of the Wild", author: {firstName: "Jack", lastName: "London", fullName: "Jack London"} }, 
+                    { bookTitle: "The Call of the Wild: Part Two", author: {firstName: "Jack", lastName: "London", fullName: "Jack London"} }, 
+                    { bookTitle: "The Lion, the Witch and the Wardrobe", author: {firstName: "C.S", lastName: "Lewis", fullName: "C.S Lewis"} }, 
+                    { bookTitle: "Prince Caspian", author: {firstName: "C.S", lastName: "Lewis", fullName: "C.S Lewis"} }, 
+                    { bookTitle: "The Silver Chair", author: {firstName: "C.S", lastName: "Lewis", fullName: "C.S Lewis"} }, 
+                    { bookTitle: "Lark Rise to Candleford", author: {firstName: "Flora", lastName: "Thompson", fullName: "Flora Thompson"} },
+                    { bookTitle: "Over to Candleford", author: {firstName: "Flora", lastName: "Thompson", fullName: "Flora Thompson"} }
+                ],
+                sortBy: 'title',
+                sortOrder: 'asc'
+            },
+            computed: {
+                sortedBooks: function() {
+                    return this.books.sort(function(a,b) {
+                        if (a.bookTitle < b.bookTitle) {
+                            return -1;
+                        }
+                        if (a.bookTitle > b.bookTitle) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                },
+                sortedBooksByOption: function() {
+                    let sortIndex1 = -1;
+                    let sortIndex2 = 1;
+                    let sortOrder = this.sortOrder;
+                    let sortBy = this.sortBy;
+
+                    if (this.sortOrder === "desc") {
+                        sortIndex1 = 1;
+                        sortIndex2 = -1;
+                    }
+
+                    return this.books.sort(function(a,b) {
+                        if (sortBy === "title") {
+                            if (a.bookTitle < b.bookTitle) {
+                                return sortIndex1;
+                            }
+                            if (a.bookTitle > b.bookTitle) {
+                                return sortIndex2;
+                            }
+                            return 0;
+                        }
+
+                        if (sortBy === "lastName") {
+                            if (a.author.lastName < b.author.lastName) {
+                                return sortIndex1;
+                            }
+                            if (a.author.lastName > b.author.lastName) {
+                                return sortIndex2;
+                            }
+
+                            return 0;
+                        }
+                    });
+                }
+            }
+        })
+</script>
+</html>

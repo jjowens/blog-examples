@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jjowens/blog-examples#readme",
   "dependencies": {
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.2",
+    "vue": "^2.6.12"
   }
 }

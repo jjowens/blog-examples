@@ -1,0 +1,10 @@
+{
+    "books": [
+        { "bookTitle": "One Hundred Years of Solitude", "author": {"firstName": "Gabriel García", "lastName": "Márquez", "fullName": "Gabriel García Márquez"} },
+        { "bookTitle": "I Capture the Castle", "author": {"firstName": "Dodie", "lastName": "Smith", "fullName": "Dodie Smith"} }, 
+        { "bookTitle": "Jane Eyre", "author": {"firstName": "Charlotte", "lastName": "Bronte", "fullName": "Charlotte Bronte"} }, 
+        { "bookTitle": "The Call of the Wild", "author": {"firstName": "Jack", "lastName": "London", "fullName": "Jack London"} }, 
+        { "bookTitle": "The Lion, the Witch and the Wardrobe", "author": {"firstName": "C.S", "lastName": "Lewis", "fullName": "C.S Lewis"} }, 
+        { "bookTitle": "Lark Rise to Candleford", "author": {"firstName": "Flora", "lastName": "Thompson", "fullName": "Flora Thompson"} }
+    ]
+}
